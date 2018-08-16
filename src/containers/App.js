@@ -85,13 +85,14 @@ class App extends Component {
     };
 
     render() {
+        const baseUrl = process.env.PUBLIC_URL;
         return (
             <Router>
                 <div>
                     <Switch>
                         <PrivateRoute
                             exact
-                            path="/"
+                            path={baseUrl + "/"}
                             component={Home}
                             isAuthenticated={this.state.isAuthenticated}
                             signout={this.signout}
@@ -103,7 +104,7 @@ class App extends Component {
                         />
                         <Route
                             exact
-                            path="/login"
+                            path={baseUrl + "/login"}
                             render={props => (
                                 <Login
                                     authenticate={this.authenticate}
@@ -146,7 +147,7 @@ const PrivateRoute = ({
                 ) : (
                     <Redirect
                         to={{
-                            pathname: "/login",
+                            pathname: `${process.env.PUBLIC_URL}/login`,
                             state: { from: props.location }
                         }}
                     />
