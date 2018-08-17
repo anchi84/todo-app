@@ -32,7 +32,7 @@ class UserProfile extends React.Component {
                     <p className="pop-phone">Phone: {user.phone}</p>
                 </div>
                 <div className="pop-tasks-container">
-                    <p className="pop-tasks">Tasks:</p>
+                    <p className="pop-tasks">Active Tasks:</p>
                     <ul>
                         {this.props.todos
                             .filter(
@@ -45,7 +45,7 @@ class UserProfile extends React.Component {
                             })}
                     </ul>
                 </div>
-                <button onClick={() => this.props.resetId()}>Back</button>
+                <button onClick={() => this.props.resetId()}>X</button>
             </div>
         ) : (
             <p>Sorry, try again later.</p>

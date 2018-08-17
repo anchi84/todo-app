@@ -202,7 +202,7 @@ textarea {
 }
 
 .pop-company {
-    color: #ffab4a;
+    color: #f38406;
     font-size: 1rem;
     margin-bottom: 10px;
 }
@@ -221,7 +221,33 @@ textarea {
 }
 
 .pop-tasks {
+    font-size: 1.2rem !important;
     color: #298fca;
+    font-size: 1.53em;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.pop-tasks-container ul li {
+    padding:3px;
+    font-style:normal;
+    font-family:Arial;
+    color: #36454F;
+}
+
+.popup_inner button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    justify-self: end;
+    padding: 3px;
+    margin-right: 5px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    border: none;
+    background-color: transparent;
+    color: #eb5a46;
+    cursor: pointer;
 }
 
 /*LOG IN PAGE*/
@@ -347,6 +373,10 @@ textarea {
     grid-area: c;
 }
 
+.tasks-container .tasks .task .input-checkbox .check {
+    cursor: url(touch.png), pointer;
+}
+
 .tasks-container .tasks .task .input-checkbox label {
     margin-left: 3px;
 }
@@ -360,6 +390,7 @@ textarea {
     background-color: #298fca;
     color: white;
     grid-area: s;
+    cursor: url(arrow.png), pointer;
 }
 
 .tasks-container .tasks .task button {
@@ -400,7 +431,7 @@ textarea {
 }
 
 .tasks-container .new-task select {
-    font-size: 1rem;
+    font-size: 1em;
     height: 44px;
     border: none;
     background-color: #298fca;
@@ -410,10 +441,11 @@ textarea {
     margin: auto;
     width: 50%;
     float: left;
+    cursor: url(arrow.png), pointer;
 }
 
 .tasks-container .new-task button {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     display: block;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -490,4 +522,5 @@ textarea {
     margin: 0px auto 8px auto;
     border-radius: 40px;
     width: 60px;
+    cursor: url(about.png), pointer;
 }
