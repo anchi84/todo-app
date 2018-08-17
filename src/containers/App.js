@@ -22,6 +22,8 @@ const getLocalStorage = () => {
     }
 };
 
+const baseUrl = process.env.PUBLIC_URL;
+
 class App extends Component {
     componentDidMount() {
         const url = `https://jsonplaceholder.typicode.com/users`;
@@ -85,7 +87,6 @@ class App extends Component {
     };
 
     render() {
-        const baseUrl = process.env.PUBLIC_URL;
         return (
             <Router>
                 <div>
@@ -132,6 +133,8 @@ const PrivateRoute = ({
 }) => {
     return (
         <Route
+            exact
+            path={baseUrl + "/"}
             {...rest}
             render={props =>
                 isAuthenticated ? (
@@ -147,7 +150,7 @@ const PrivateRoute = ({
                 ) : (
                     <Redirect
                         to={{
-                            pathname: `${process.env.PUBLIC_URL}/login`,
+                            pathname: `${baseUrl}/login`,
                             state: { from: props.location }
                         }}
                     />
